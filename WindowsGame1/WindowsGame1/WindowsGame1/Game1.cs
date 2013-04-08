@@ -131,8 +131,8 @@ namespace WindowsGame1
             if (m_kbState.IsKeyDown(Keys.A) == true)
             {
                 spriteBatch.Draw(curTex, new Rectangle(100, 100, curTex.Width, curTex.Height), Color.White);
-                soundInstance = m_soundEffects[0].CreateInstance();
-                soundInstance.Play();
+                //soundInstance = m_soundEffects[0].CreateInstance();
+                //soundInstance.Play();
             }
             else if (m_kbState.IsKeyDown(Keys.D) == true)
             {
