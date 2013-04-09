@@ -1,0 +1,6 @@
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GridHighlighter.exe
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GridHighlighter.pdb
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.csprojResolveAssemblyReference.cache
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.exe
+C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.pdb
