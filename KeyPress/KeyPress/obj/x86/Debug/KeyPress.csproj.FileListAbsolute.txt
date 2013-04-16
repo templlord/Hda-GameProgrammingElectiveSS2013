@@ -1,0 +1,5 @@
+d:\users\jessica\documents\visual studio 2010\Projects\KeyPress\KeyPress\bin\Debug\KeyPress.exe
+d:\users\jessica\documents\visual studio 2010\Projects\KeyPress\KeyPress\bin\Debug\KeyPress.pdb
+d:\users\jessica\documents\visual studio 2010\Projects\KeyPress\KeyPress\obj\x86\Debug\KeyPress.exe
+d:\users\jessica\documents\visual studio 2010\Projects\KeyPress\KeyPress\obj\x86\Debug\KeyPress.pdb
+D:\Users\Jessica\Documents\Visual Studio 2010\Projects\KeyPress\KeyPress\obj\x86\Debug\KeyPress.csprojResolveAssemblyReference.cache
