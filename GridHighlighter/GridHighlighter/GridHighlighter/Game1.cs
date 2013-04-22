@@ -95,8 +95,8 @@ namespace GridHighlighter
                 for (int j = 0; j < grid.GetLength(1); ++j)
                 {
                     grid[i, j].setActive(false);
-                    if (mouseState.X > i * GRID_SIZE && mouseState.X < (i + 1) * GRID_SIZE
-                        && mouseState.Y > j * GRID_SIZE && mouseState.Y < (j + 1) * GRID_SIZE)
+                    if (mouseState.X > i * GRID_SIZE && mouseState.X < (i + 1) * GRID_SIZE + 1
+                        && mouseState.Y > j * GRID_SIZE && mouseState.Y < (j + 1) * GRID_SIZE + 1)
                     {
                         grid[i, j].setActive(true);
                     }
