@@ -20,7 +20,7 @@ namespace GridHighlighter
         SpriteBatch spriteBatch;
         MouseState mouseState = Mouse.GetState();
 
-        const int GRID_SIZE = 25;
+        const int GRID_SIZE = 20;
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
 
         Animator mario = new Animator();
