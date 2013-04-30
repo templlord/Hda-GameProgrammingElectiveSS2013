@@ -20,8 +20,12 @@ namespace GridHighlighter
         SpriteBatch spriteBatch;
         MouseState mouseState = Mouse.GetState();
 
-        const int GRID_SIZE = 25;
+        const int GRID_SIZE = 20;
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
+
+        Animator mario = new Animator();
+        Point marioPosition = new Point(0, 0);
+        bool marioShowing = false;
 
         public Game1()
         {
@@ -59,6 +63,10 @@ namespace GridHighlighter
                     grid[i, j] = new Tile(GRID_SIZE, GraphicsDevice);
                 }
             }
+
+            mario.addImage(this.Content.Load<Texture2D>("Mario"));
+            mario.addImage(this.Content.Load<Texture2D>("Mario2"));
+            mario.addImage(this.Content.Load<Texture2D>("Mario3"));
         }
 
         /// <summary>
@@ -87,12 +95,23 @@ namespace GridHighlighter
                 for (int j = 0; j < grid.GetLength(1); ++j)
                 {
                     grid[i, j].setActive(false);
-                    if (mouseState.X > i * GRID_SIZE && mouseState.X < (i + 1) * GRID_SIZE
-                        && mouseState.Y > j * GRID_SIZE && mouseState.Y < (j + 1) * GRID_SIZE)
+                    if (mouseState.X > i * GRID_SIZE && mouseState.X < (i + 1) * GRID_SIZE + 1
+                        && mouseState.Y > j * GRID_SIZE && mouseState.Y < (j + 1) * GRID_SIZE + 1)
                     {
                         grid[i, j].setActive(true);
                     }
                 }
+            }
+
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                marioPosition.X = mouseState.X;
+                marioPosition.Y = mouseState.Y;
+                marioShowing = true;
+            }
+            else if (mouseState.RightButton == ButtonState.Pressed)
+            {
+                marioShowing = false;
             }
 
             base.Update(gameTime);
@@ -124,6 +143,12 @@ namespace GridHighlighter
 
                     spriteBatch.Draw(grid[i, j].getTexture(), grid[i, j].getRectangle(), grid[i, j].getColor());
                 }
+            }
+
+            if (marioShowing)
+            {
+                spriteBatch.Draw(mario.getCurrentImage(), new Rectangle(marioPosition.X, marioPosition.Y, mario.getCurrentImage().Width, mario.getCurrentImage().Height), Color.White);
+                mario.nextImage(gameTime);
             }
 
             spriteBatch.End();
@@ -182,6 +207,40 @@ namespace GridHighlighter
         public void setColor(Color c)
         {
             this.color = c;
+        }
+    }
+
+    public class Animator
+    {
+        private int nextImageFactor = 1;
+        private int currentImageIndex = 0;
+        private List<Texture2D> imageList = new List<Texture2D>();
+        private const int MILLISECONDS_PER_FRAME = 200;
+        private int frameTimer = MILLISECONDS_PER_FRAME;
+
+        public void addImage(Texture2D image)
+        {
+            imageList.Add(image);
+        }
+
+        public Texture2D getCurrentImage()
+        {
+            return imageList[currentImageIndex];
+        }
+
+        public void nextImage(GameTime gameTime)
+        {
+            frameTimer -= gameTime.ElapsedGameTime.Milliseconds;
+            if (frameTimer <= 0)
+            {
+                frameTimer = MILLISECONDS_PER_FRAME;
+                if (   (nextImageFactor == 1  && currentImageIndex == imageList.Count - 1)
+                    || (nextImageFactor == -1 && currentImageIndex == 0))
+                {
+                    nextImageFactor *= -1;
+                }
+                currentImageIndex += nextImageFactor;
+            }
         }
     }
 }
