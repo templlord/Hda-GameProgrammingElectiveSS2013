@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="GridHighlighter.CAnimationHandler">
+    <id>0</id>
+    <name>Mario</name>
+    <sprites>
+      <sprite>Mario</sprite>
+      <sprite>Mario2</sprite>
+      <sprite>Mario3</sprite>
+    </sprites>
+    <loop>1</loop>
+    <reverseOnEnd>1</reverseOnEnd>
+  </Asset>
+</XnaContent>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridHighlighter", "GridHighlighter\GridHighlighter\GridHighlighter.csproj", "{29BA00DF-EB14-46E2-B50D-F5BD9282BAA5}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "GridHighlighterContent", "GridHighlighter\GridHighlighterContent\GridHighlighterContent.contentproj", "{EFFE36D7-67D8-4331-8F9C-A6EE5F910B17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridHighlighterContent", "GridHighlighter\GridHighlighterContent\GridHighlighterContent.contentproj", "{EFFE36D7-67D8-4331-8F9C-A6EE5F910B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
