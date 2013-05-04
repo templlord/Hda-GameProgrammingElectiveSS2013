@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using GameLibrary;
 
 namespace GridHighlighter
 {
@@ -23,9 +24,9 @@ namespace GridHighlighter
         const int GRID_SIZE = 20;
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
 
-        Animator mario = new Animator();
-        Point marioPosition = new Point(0, 0);
-        bool marioShowing = false;
+        CAnimationHandler marioHandler = new CAnimationHandler();
+        SAnimationInstance marioLeftClick;
+        SAnimationInstance marioRightClick;
 
         public Game1()
         {
@@ -64,9 +65,9 @@ namespace GridHighlighter
                 }
             }
 
-            mario.addImage(this.Content.Load<Texture2D>("Mario"));
-            mario.addImage(this.Content.Load<Texture2D>("Mario2"));
-            mario.addImage(this.Content.Load<Texture2D>("Mario3"));
+            marioHandler = this.Content.Load<CAnimationHandler>(@"Animations");
+            marioLeftClick = new SAnimationInstance(marioHandler.ID, marioHandler.Name);
+            marioRightClick = new SAnimationInstance(marioHandler.ID, marioHandler.Name);
         }
 
         /// <summary>
@@ -105,13 +106,15 @@ namespace GridHighlighter
 
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                marioPosition.X = mouseState.X;
-                marioPosition.Y = mouseState.Y;
-                marioShowing = true;
+                marioLeftClick.position.X = mouseState.X;
+                marioLeftClick.position.Y = mouseState.Y;
+                marioLeftClick.showing = true;
             }
             else if (mouseState.RightButton == ButtonState.Pressed)
             {
-                marioShowing = false;
+                marioRightClick.position.X = mouseState.X;
+                marioRightClick.position.Y = mouseState.Y;
+                marioRightClick.showing = true;
             }
 
             base.Update(gameTime);
@@ -145,10 +148,15 @@ namespace GridHighlighter
                 }
             }
 
-            if (marioShowing)
+            if (marioLeftClick.showing)
             {
-                spriteBatch.Draw(mario.getCurrentImage(), new Rectangle(marioPosition.X, marioPosition.Y, mario.getCurrentImage().Width, mario.getCurrentImage().Height), Color.White);
-                mario.nextImage(gameTime);
+                spriteBatch.Draw(marioLeftClick.getCurrentImage(marioHandler), new Rectangle(marioLeftClick.position.X, marioLeftClick.position.Y, marioLeftClick.getCurrentImage(marioHandler).Width, marioLeftClick.getCurrentImage(marioHandler).Height), Color.White);
+                marioLeftClick.nextImage(gameTime, marioHandler);
+            }
+            if (marioRightClick.showing)
+            {
+                spriteBatch.Draw(marioRightClick.getCurrentImage(marioHandler), new Rectangle(marioRightClick.position.X, marioRightClick.position.Y, marioRightClick.getCurrentImage(marioHandler).Width, marioRightClick.getCurrentImage(marioHandler).Height), Color.White);
+                marioRightClick.nextImage(gameTime, marioHandler);
             }
 
             spriteBatch.End();
@@ -156,6 +164,8 @@ namespace GridHighlighter
             base.Draw(gameTime);
         }
     }
+
+    
 
     public class Tile
     {
@@ -207,40 +217,6 @@ namespace GridHighlighter
         public void setColor(Color c)
         {
             this.color = c;
-        }
-    }
-
-    public class Animator
-    {
-        private int nextImageFactor = 1;
-        private int currentImageIndex = 0;
-        private List<Texture2D> imageList = new List<Texture2D>();
-        private const int MILLISECONDS_PER_FRAME = 200;
-        private int frameTimer = MILLISECONDS_PER_FRAME;
-
-        public void addImage(Texture2D image)
-        {
-            imageList.Add(image);
-        }
-
-        public Texture2D getCurrentImage()
-        {
-            return imageList[currentImageIndex];
-        }
-
-        public void nextImage(GameTime gameTime)
-        {
-            frameTimer -= gameTime.ElapsedGameTime.Milliseconds;
-            if (frameTimer <= 0)
-            {
-                frameTimer = MILLISECONDS_PER_FRAME;
-                if (   (nextImageFactor == 1  && currentImageIndex == imageList.Count - 1)
-                    || (nextImageFactor == -1 && currentImageIndex == 0))
-                {
-                    nextImageFactor *= -1;
-                }
-                currentImageIndex += nextImageFactor;
-            }
         }
     }
 }

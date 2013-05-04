@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="GameLibrary.CAnimationHandler">
+    <ID>0</ID>
+    <Name>Mario</Name>
+    <Loop>true</Loop>
+    <ReverseOnEnd>true</ReverseOnEnd>
+    <Sprites>
+      <Item Type="System.String">Mario</Item>
+      <Item Type="System.String">Mario2</Item>
+      <Item Type="System.String">Mario3</Item>
+    </Sprites>
+  </Asset>
+</XnaContent>
