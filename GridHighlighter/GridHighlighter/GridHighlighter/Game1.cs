@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using GameLibrary;
 
 namespace GridHighlighter
 {
@@ -23,7 +24,7 @@ namespace GridHighlighter
         const int GRID_SIZE = 20;
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
 
-        CAnimationHandler marioHandler;
+        CAnimationHandler marioHandler = new CAnimationHandler();
         SAnimationInstance marioLeftClick;
         SAnimationInstance marioRightClick;
 
@@ -64,9 +65,9 @@ namespace GridHighlighter
                 }
             }
 
-            //marioHandler = this.Content.Load<CAnimationHandler>(@"Animations");
-            marioLeftClick = new SAnimationInstance(0, "Mario");
-            marioRightClick = new SAnimationInstance(0, "Mario");
+            marioHandler = this.Content.Load<CAnimationHandler>(@"Animations");
+            marioLeftClick = new SAnimationInstance(marioHandler.ID, marioHandler.Name);
+            marioRightClick = new SAnimationInstance(marioHandler.ID, marioHandler.Name);
         }
 
         /// <summary>

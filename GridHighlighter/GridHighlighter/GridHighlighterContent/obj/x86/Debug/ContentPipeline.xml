@@ -28,6 +28,15 @@
       <Output>C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\mario3.xnb</Output>
       <Time>2013-04-30T08:46:42.2923574+02:00</Time>
     </Item>
+    <Item>
+      <Source>Animations.xml</Source>
+      <Name>Animations</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\Animations.xnb</Output>
+      <Time>2013-05-04T17:13:57.2591992+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
@@ -40,6 +49,10 @@
       <OutputDirectory>C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
+      <Assembly>
+        <Key>C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\XMLContentExtension.dll</Key>
+        <Value>2013-05-04T17:09:42.459537+02:00</Value>
+      </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>

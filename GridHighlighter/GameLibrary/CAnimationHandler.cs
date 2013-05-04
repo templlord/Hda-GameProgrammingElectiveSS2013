@@ -8,58 +8,77 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace GridHighlighter
+namespace GameLibrary
 {
     public class CAnimationHandler
     {
         private int id;
         private string name;
-        private List<string> sprites;
-        private List<Texture2D> images;
         private bool loop = false;
         private bool reverseOnEnd = false;
+        private List<string> sprites = new List<string>();
+        private List<Texture2D> images = new List<Texture2D>();
 
-        public CAnimationHandler(int id, string name, List<string> sprites, bool loop, bool reverseOnEnd)
+        public int ID
         {
-            this.id = id;
-            this.name = name;
-            this.sprites = sprites;
-            this.images = new List<Texture2D>();
-            this.loop = loop;
-            this.reverseOnEnd = reverseOnEnd;
+            get { return id; }
+            set { id = value; }
         }
 
-        public void loadImages(ContentManager content)
+        public string Name
         {
-            foreach (string imageName in sprites)
+            get { return name; }
+            set { name = value; }
+        }
+
+        public bool Loop
+        {
+            get { return loop; }
+            set { loop = value; }
+        }
+
+        public bool ReverseOnEnd
+        {
+            get { return reverseOnEnd; }
+            set { reverseOnEnd = value; }
+        }
+
+        public List<string> Sprites
+        {
+            get { return sprites; }
+            set { sprites = value; }
+        }
+
+        [ContentSerializerIgnore]
+        public List<Texture2D> Images
+        {
+            get { return images; }
+        }
+
+        public void loadImage(ContentManager content, string imageName)
+        {
+            images.Add(content.Load<Texture2D>(imageName));
+        }
+    }
+
+    public class CAnimationContentReader : ContentTypeReader<CAnimationHandler>
+    {
+        protected override CAnimationHandler Read(ContentReader input, CAnimationHandler existingInstance)
+        {
+            CAnimationHandler animationHandler = new CAnimationHandler();
+
+            animationHandler.ID = input.ReadInt32();
+            animationHandler.Name = input.ReadString();
+            animationHandler.Loop = input.ReadBoolean();
+            animationHandler.ReverseOnEnd = input.ReadBoolean();
+            animationHandler.Sprites = input.ReadObject<List<string>>();
+
+            foreach (string sprite in animationHandler.Sprites)
             {
-                images.Add(content.Load<Texture2D>(imageName));
+                animationHandler.loadImage(input.ContentManager, sprite);
             }
-        }
 
-        public int getID()
-        {
-            return id;
-        }
-
-        public string getName()
-        {
-            return name;
-        }
-
-        public List<Texture2D> getImages()
-        {
-            return images;
-        }
-
-        public bool reversesOnEnd()
-        {
-            return reverseOnEnd;
-        }
-
-        public bool loops()
-        {
-            return loop;
+            return animationHandler;
         }
     }
 
@@ -90,7 +109,7 @@ namespace GridHighlighter
 
         public Texture2D getCurrentImage(CAnimationHandler animationHandler)
         {
-            return animationHandler.getImages()[currentImageIndex];
+            return animationHandler.Images[currentImageIndex];
         }
 
         public void nextImage(GameTime gameTime, CAnimationHandler animationHandler)
@@ -99,22 +118,12 @@ namespace GridHighlighter
             if (frameTimer <= 0)
             {
                 frameTimer = MILLISECONDS_PER_FRAME;
-                if (nextImageFactor == 1)
-                {
-                    if (currentImageIndex == animationHandler.getImages().Count - 1)
-                    {
-                        if (animationHandler.loops())
-                        {
-
-                        }
-                    }
-                }
-                if ((nextImageFactor == 1 && currentImageIndex == animationHandler.getImages().Count - 1)
+                if ((nextImageFactor == 1 && currentImageIndex == animationHandler.Images.Count - 1)
                     || (nextImageFactor == -1 && currentImageIndex == 0))
                 {
-                    if (animationHandler.loops())
+                    if (animationHandler.Loop)
                     {
-                        if (animationHandler.reversesOnEnd())
+                        if (animationHandler.ReverseOnEnd)
                         {
                             nextImageFactor *= -1;
                         }

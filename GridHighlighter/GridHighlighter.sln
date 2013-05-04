@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridHighlighter", "GridHigh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridHighlighterContent", "GridHighlighter\GridHighlighterContent\GridHighlighterContent.contentproj", "{EFFE36D7-67D8-4331-8F9C-A6EE5F910B17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLContentExtension", "XMLContentExtension\XMLContentExtension.csproj", "{32674EB6-7B5B-4E57-AAEC-21656DC48AED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLibrary", "GameLibrary\GameLibrary.csproj", "{1EA627D0-D2FB-40B9-A10A-78FC1F256AC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,6 +21,14 @@ Global
 		{29BA00DF-EB14-46E2-B50D-F5BD9282BAA5}.Release|x86.Build.0 = Release|x86
 		{EFFE36D7-67D8-4331-8F9C-A6EE5F910B17}.Debug|x86.ActiveCfg = Debug|x86
 		{EFFE36D7-67D8-4331-8F9C-A6EE5F910B17}.Release|x86.ActiveCfg = Release|x86
+		{32674EB6-7B5B-4E57-AAEC-21656DC48AED}.Debug|x86.ActiveCfg = Debug|x86
+		{32674EB6-7B5B-4E57-AAEC-21656DC48AED}.Debug|x86.Build.0 = Debug|x86
+		{32674EB6-7B5B-4E57-AAEC-21656DC48AED}.Release|x86.ActiveCfg = Debug|x86
+		{32674EB6-7B5B-4E57-AAEC-21656DC48AED}.Release|x86.Build.0 = Debug|x86
+		{1EA627D0-D2FB-40B9-A10A-78FC1F256AC8}.Debug|x86.ActiveCfg = Debug|x86
+		{1EA627D0-D2FB-40B9-A10A-78FC1F256AC8}.Debug|x86.Build.0 = Debug|x86
+		{1EA627D0-D2FB-40B9-A10A-78FC1F256AC8}.Release|x86.ActiveCfg = Release|x86
+		{1EA627D0-D2FB-40B9-A10A-78FC1F256AC8}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
