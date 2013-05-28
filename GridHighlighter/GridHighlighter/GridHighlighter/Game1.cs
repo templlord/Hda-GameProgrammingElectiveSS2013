@@ -1,4 +1,5 @@
 using System;
+using System.Timers;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -22,7 +23,7 @@ namespace GridHighlighter
         MouseState previousMouseState = Mouse.GetState();
 
         const int GRID_SIZE = 25;
-        Rectangle SCREEN_RECT = new Rectangle(0, 0, GRID_SIZE * GRID_SIZE, GRID_SIZE * GRID_SIZE);
+        Rectangle SCREEN_RECT = new Rectangle(0,0,GRID_SIZE*GRID_SIZE,GRID_SIZE*GRID_SIZE);
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
         Graph route = new Graph();
         List<Enemy> Enemies = new List<Enemy>();
@@ -64,7 +65,6 @@ namespace GridHighlighter
                     grid[i, j] = new Tile(GRID_SIZE, GraphicsDevice);
                 }
             }
-
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace GridHighlighter
             //Draw lines
             foreach (Line connection in route.lines)
             {
-                //connection.Draw(spriteBatch, GRID_SIZE);
+                connection.Draw(spriteBatch, GRID_SIZE);
             }
 
             //Animate enemies
@@ -203,6 +203,20 @@ namespace GridHighlighter
             {
                 opponent.MoveAlongGraph(spriteBatch/*, route*/, GRID_SIZE);
             }
+
+            //Draw projectiles
+            foreach (Projectile shot in Projectiles)
+            {
+                shot.MoveAndDraw(spriteBatch, GRID_SIZE);
+            }
+
+
+            //Draw lines
+            foreach (Line connection in route.lines)
+            {
+                //connection.Draw(spriteBatch, GRID_SIZE);
+            }
+
 
             //Draw projectiles
             foreach (Projectile shot in Projectiles)
@@ -215,8 +229,6 @@ namespace GridHighlighter
             base.Draw(gameTime);
         }
 
-        //Removes enemies that have completed their path
-        public void RemoveEnemies()
         {
             for (int i = 0; i < Enemies.Count; ++i)
             {
