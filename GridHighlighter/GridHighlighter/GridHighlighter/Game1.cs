@@ -195,7 +195,7 @@ namespace GridHighlighter
             //Draw lines
             foreach (Line connection in route.lines)
             {
-                connection.Draw(spriteBatch, GRID_SIZE);
+                //connection.Draw(spriteBatch, GRID_SIZE);
             }
 
             //Animate enemies
@@ -207,7 +207,7 @@ namespace GridHighlighter
             //Draw projectiles
             foreach (Projectile shot in Projectiles)
             {
-                shot.MoveAndDraw(spriteBatch, GRID_SIZE);
+                //shot.MoveAndDraw(spriteBatch, GRID_SIZE);
             }
 
 
@@ -229,6 +229,7 @@ namespace GridHighlighter
             base.Draw(gameTime);
         }
 
+        private void RemoveEnemies()
         {
             for (int i = 0; i < Enemies.Count; ++i)
             {
