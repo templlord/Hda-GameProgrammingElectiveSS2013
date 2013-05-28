@@ -1,1 +1,2 @@
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighterContent\obj\x86\Debug\GridHighlighterContent.contentprojResolveAssemblyReference.cache
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighterContent\obj\x86\Debug\GridHighlighterContent.contentprojResolveAssemblyReference.cache

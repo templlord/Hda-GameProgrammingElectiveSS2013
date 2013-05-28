@@ -5,3 +5,10 @@ C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighligh
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\obj\x86\Debug\XMLContentExtension.pdb
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\GameLibrary.dll
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\XMLContentExtension.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\XMLContentExtension.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\GameLibrary.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\bin\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\obj\x86\Debug\XMLContentExtension.csprojResolveAssemblyReference.cache
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\obj\x86\Debug\XMLContentExtension.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\XMLContentExtension\obj\x86\Debug\XMLContentExtension.pdb

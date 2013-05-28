@@ -10,3 +10,15 @@ C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighligh
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\Animations.xnb
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GameLibrary.dll
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\Mario.xnb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\Mario2.xnb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\mario3.xnb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\Content\Animations.xnb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GridHighlighter.exe
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GridHighlighter.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GameLibrary.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\bin\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.csprojResolveAssemblyReference.cache
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.exe
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GridHighlighter\GridHighlighter\obj\x86\Debug\GridHighlighter.pdb

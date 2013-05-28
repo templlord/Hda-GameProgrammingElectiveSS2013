@@ -3,3 +3,9 @@ C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighligh
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\GameLibrary.dll
 C:\Users\Tristan\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\bin\x86\Debug\GameLibrary.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\bin\x86\Debug\GameLibrary.pdb
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\GameLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\GameLibrary.dll
+C:\Users\Gitz\Documents\GitHub\Hda-GameProgrammingElectiveSS2013\GridHighlighter\GameLibrary\obj\x86\Debug\GameLibrary.pdb
