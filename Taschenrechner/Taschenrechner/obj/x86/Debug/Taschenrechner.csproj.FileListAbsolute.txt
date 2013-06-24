@@ -1,0 +1,8 @@
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\bin\Debug\Taschenrechner.exe
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\bin\Debug\Taschenrechner.pdb
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.csproj.GenerateResource.Cache
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.exe
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.pdb
+C:\Users\Nokio\Desktop\GameProgramming\Rechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.csprojResolveAssemblyReference.cache

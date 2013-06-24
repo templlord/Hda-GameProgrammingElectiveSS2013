@@ -1,0 +1,28 @@
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.xml
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.vbproj.ResolveComReference.cache
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3_Player.Form1.resources
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3_Player.Resources.resources
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.vbproj.GenerateResource.Cache
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.exe
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.xml
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.pdb
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.vbproj.ResolveComReference.cache
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.exe
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.xml
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.pdb
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3_Player.Form1.resources
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3_Player.Resources.resources
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\obj\x86\Debug\MP3 Player.vbproj.GenerateResource.Cache
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\bin\Debug\MP3 Player.xml
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Documents\Hda-GameProgrammingElectiveSS2013\mp3 player\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll

@@ -1,0 +1,24 @@
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Nokio\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Interop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Nokio\Desktop\GameProgramming\mp3 player mit cshardp\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
