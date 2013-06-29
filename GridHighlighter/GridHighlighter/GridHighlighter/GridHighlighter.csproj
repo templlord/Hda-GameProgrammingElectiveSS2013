@@ -116,6 +116,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Waypoint.cs" />
+    <Compile Include="WayPointList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

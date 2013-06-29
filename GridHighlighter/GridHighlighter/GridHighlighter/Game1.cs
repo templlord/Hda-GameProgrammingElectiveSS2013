@@ -111,18 +111,18 @@ namespace GridHighlighter
                         {
                             grid[i, j].setOccupied(true);
                             route.AddWaypoint(i, j);
-                            if (route.waypoints.Count > 1)
+                            if (route.waypoints.HasValidLength())
                             {
-                                route.lines.Add(new Line(route.waypoints[route.waypoints.Count - 2], route.waypoints[route.waypoints.Count - 1], GRID_SIZE, Color.Orange, 1));
+                                route.lines.Add(new Line(route.waypoints.list[route.waypoints.list.Count - 2], route.waypoints.list[route.waypoints.list.Count - 1], GRID_SIZE, Color.Orange, 1));
                             }
                         }
 
                         //Animates an object along the graph on RMB click
                         if (previousMouseState.RightButton == ButtonState.Released && mouseState.RightButton == ButtonState.Pressed)
                         {
-                            if (route.waypoints.Count > 1)
+                            if (route.waypoints.HasValidLength())
                             {
-                                Enemies.Add(new Enemy(route.waypoints[0].ConvertToScreenCoordinates(GRID_SIZE), 20, 3, 1, 150, 1000, route, marioHandler));
+                                Enemies.Add(new Enemy(route.waypoints.list[route.waypoints.FindNearestStartingWaypointIndex(i,j)].ConvertToScreenCoordinates(GRID_SIZE), 20, 3, 1, 150, 1000, route, marioHandler));
                             }
                         }
                     }
@@ -193,7 +193,7 @@ namespace GridHighlighter
             }
 
             //Color waypoints
-            foreach (Waypoint point in route.waypoints)
+            foreach (Waypoint point in route.waypoints.list)
             {
                 grid[point.x, point.y].setColor(Color.Yellow);
                 spriteBatch.Draw(grid[point.x, point.y].getTexture(), grid[point.x, point.y].getRectangle(), grid[point.x, point.y].getColor());

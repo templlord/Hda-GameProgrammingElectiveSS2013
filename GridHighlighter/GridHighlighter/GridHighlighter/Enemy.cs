@@ -128,7 +128,7 @@ namespace GridHighlighter
         //Animates the object's movement along a graph
         public void MoveAlongGraph(SpriteBatch batch, int gridSize)
         {
-            Vector2 nextNodeScreenPosition = path.waypoints[nextNode].ConvertToScreenCoordinates(gridSize);
+            Vector2 nextNodeScreenPosition = path.waypoints.list[nextNode].ConvertToScreenCoordinates(gridSize);
             Vector2 lastNodeScreenPosition;
             if (distanceInPreviousFrame == 0)  //Initial setup for distanceInPreviousFrame
             {
@@ -136,7 +136,7 @@ namespace GridHighlighter
             }
             if (Vector2.Distance(position, nextNodeScreenPosition) > distanceInPreviousFrame)   //Change target node if distance is increasing (--> node has been passed)
             {
-                if (nextNode < path.waypoints.Count - 1)
+                if (nextNode < path.waypoints.list.Count - 1)
                 {
                     ++lastNode;
                     ++nextNode;
@@ -146,8 +146,8 @@ namespace GridHighlighter
                     completedPath = true;
                 }
             }
-            nextNodeScreenPosition = path.waypoints[nextNode].ConvertToScreenCoordinates(gridSize);
-            lastNodeScreenPosition = path.waypoints[lastNode].ConvertToScreenCoordinates(gridSize);
+            nextNodeScreenPosition = path.waypoints.list[nextNode].ConvertToScreenCoordinates(gridSize);
+            lastNodeScreenPosition = path.waypoints.list[lastNode].ConvertToScreenCoordinates(gridSize);
             distanceInPreviousFrame = Vector2.Distance(position, nextNodeScreenPosition);
             position += (nextNodeScreenPosition - lastNodeScreenPosition) / Vector2.Distance(lastNodeScreenPosition, nextNodeScreenPosition) * speed;
             rectangle.X = (int)(position.X - rectangle.Width * 0.5);
