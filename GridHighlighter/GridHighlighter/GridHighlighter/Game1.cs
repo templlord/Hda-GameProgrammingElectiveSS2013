@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using GameLibrary;
 
 namespace GridHighlighter
 {
@@ -25,6 +26,10 @@ namespace GridHighlighter
         const int GRID_SIZE = 25;
         Rectangle SCREEN_RECT = new Rectangle(0,0,GRID_SIZE*GRID_SIZE,GRID_SIZE*GRID_SIZE);
         Tile[,] grid = new Tile[GRID_SIZE, GRID_SIZE];
+
+        CAnimationHandler marioHandler = new CAnimationHandler();
+        SAnimationInstance marioLeftClick;
+
         Graph route = new Graph();
         List<Enemy> Enemies = new List<Enemy>();
         List<Projectile> Projectiles = new List<Projectile>();
@@ -65,6 +70,8 @@ namespace GridHighlighter
                     grid[i, j] = new Tile(GRID_SIZE, GraphicsDevice);
                 }
             }
+
+            marioHandler = this.Content.Load<CAnimationHandler>(@"Animations");
         }
 
         /// <summary>
@@ -115,7 +122,7 @@ namespace GridHighlighter
                         {
                             if (route.waypoints.Count > 1)
                             {
-                                Enemies.Add(new Enemy(route.waypoints[0].ConvertToScreenCoordinates(GRID_SIZE), 20, Color.Blue, 3, 1, 150, 1000, route));
+                                Enemies.Add(new Enemy(route.waypoints[0].ConvertToScreenCoordinates(GRID_SIZE), 20, 3, 1, 150, 1000, route, marioHandler));
                             }
                         }
                     }
@@ -202,6 +209,8 @@ namespace GridHighlighter
             foreach (Enemy opponent in Enemies)
             {
                 opponent.MoveAlongGraph(spriteBatch/*, route*/, GRID_SIZE);
+                spriteBatch.Draw(opponent.getAnimationInstance().getCurrentImage(marioHandler), new Rectangle((int)opponent.getPosition().X, (int)opponent.getPosition().Y, opponent.getAnimationInstance().getCurrentImage(marioHandler).Width, opponent.getAnimationInstance().getCurrentImage(marioHandler).Height), Color.White);
+                opponent.animationNextImage(gameTime, marioHandler);
             }
 
             //Draw projectiles

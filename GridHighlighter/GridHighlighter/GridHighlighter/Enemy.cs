@@ -6,6 +6,7 @@ using System.Timers;
 using Microsoft.Xna.Framework;
 //using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using GameLibrary;
 
 namespace GridHighlighter
 {
@@ -13,7 +14,7 @@ namespace GridHighlighter
     {
         //private Texture2D sprite;
         private Vector2 position;
-        private Color color;
+        //private Color color;
         private Rectangle rectangle;
         private Graph path;
         //private Timer shotTimer;
@@ -24,11 +25,13 @@ namespace GridHighlighter
         private int lastNode = 0;
         private int nextNode = 1;
         private int hitPoints;
-        private int spriteID;
+        //private int spriteID;
         private int shotTimer;
         private bool completedPath = false;
         private bool shotPossible = true;
         private bool alive = true;
+
+        private SAnimationInstance animationInstance;
 
 
         /*//----------STATE MACHINE-------------
@@ -55,13 +58,18 @@ namespace GridHighlighter
         //------------------------------------*/
 
         //Constructor
-        public Enemy(Vector2 enemyPosition, int enemySize, Color enemyColor, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath)
+        //public Enemy(Vector2 enemyPosition, int enemySize, Color enemyColor, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath)
+        public Enemy(Vector2 enemyPosition, int enemySize, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath, CAnimationHandler animationHandler)
         {
             //sprite = new Texture2D(graphicsDevice, 1, 1);   //IDs
             //sprite.SetData(new[] { Color.White });
+            animationInstance = new SAnimationInstance(animationHandler.ID, animationHandler.Name);
+            animationInstance.position.X = (int)enemyPosition.X;
+            animationInstance.position.Y = (int)enemyPosition.Y;
+            position = enemyPosition;
             position = enemyPosition;
             hitPoints = enemyHP;
-            color = enemyColor;
+            //color = enemyColor;
             speed = enemySpeed;
             range = enemyRange;
             path = enemyPath;
@@ -97,6 +105,26 @@ namespace GridHighlighter
             return completedPath;
         }
 
+        public SAnimationInstance getAnimationInstance()
+        {
+            return animationInstance;
+        }
+
+        public void animationNextImage(GameTime gameTime, CAnimationHandler animationHandler)
+        {
+            animationInstance.nextImage(gameTime, animationHandler);
+        }
+
+        public Vector2 getPosition() 
+        {
+            return position;
+        }
+
+        public Rectangle getRect()
+        {
+            return rectangle;
+        }
+
         //Animates the object's movement along a graph
         public void MoveAlongGraph(SpriteBatch batch, int gridSize)
         {
@@ -125,6 +153,7 @@ namespace GridHighlighter
             rectangle.X = (int)(position.X - rectangle.Width * 0.5);
             rectangle.Y = (int)(position.Y - rectangle.Height * 0.5);
             //batch.Draw(sprite, rectangle, color);
+
         }
 
         //Finds the first enemy within shooting range and returns it. Returns null if no enemies in range
