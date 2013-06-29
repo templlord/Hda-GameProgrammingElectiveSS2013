@@ -26,5 +26,10 @@ namespace GridHighlighter
 
             return new Vector2(x * gridSize + gridSize / 2, y * gridSize + gridSize / 2);   // + gridSize/2 will be wrong later on when window size does not depend on gridSize --> tileSize variable or further calculation needed
         }
+
+        public Vector2 ToVector2()
+        {
+            return new Vector2(x,y);
+        }
     }
 }

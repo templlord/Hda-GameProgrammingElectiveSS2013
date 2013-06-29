@@ -12,10 +12,8 @@ namespace GridHighlighter
 {
     public class Enemy
     {
-        //private Texture2D sprite;
         private Vector2 position;
-        //private Color color;
-        private Rectangle rectangle;
+        private Rectangle hitBox;
         private Graph path;
         //private Timer shotTimer;
         private float range;
@@ -58,24 +56,21 @@ namespace GridHighlighter
         //------------------------------------*/
 
         //Constructor
-        //public Enemy(Vector2 enemyPosition, int enemySize, Color enemyColor, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath)
-        public Enemy(Vector2 enemyPosition, int enemySize, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath, CAnimationHandler animationHandler)
+        public Enemy(Vector2 enemyPosition, Rectangle enemyhitBox, int enemyHP, int enemySpeed, float enemyRange, float enemyShotDelay, Graph enemyPath, int startNode, CAnimationHandler animationHandler)
         {
-            //sprite = new Texture2D(graphicsDevice, 1, 1);   //IDs
-            //sprite.SetData(new[] { Color.White });
             animationInstance = new SAnimationInstance(animationHandler.ID, animationHandler.Name);
             animationInstance.position.X = (int)enemyPosition.X;
             animationInstance.position.Y = (int)enemyPosition.Y;
             position = enemyPosition;
             position = enemyPosition;
             hitPoints = enemyHP;
-            //color = enemyColor;
             speed = enemySpeed;
             range = enemyRange;
             path = enemyPath;
             shotDelay = enemyShotDelay;
-            rectangle.Width = enemySize;
-            rectangle.Height = enemySize;
+            hitBox = enemyhitBox;
+            lastNode = startNode;
+            nextNode = startNode + 1;
             //enemyState = new eState(Idle);
         }
 
@@ -122,11 +117,11 @@ namespace GridHighlighter
 
         public Rectangle getRect()
         {
-            return rectangle;
+            return hitBox;
         }
 
         //Animates the object's movement along a graph
-        public void MoveAlongGraph(SpriteBatch batch, int gridSize)
+        public void MoveAlongGraph(int gridSize)
         {
             Vector2 nextNodeScreenPosition = path.waypoints.list[nextNode].ConvertToScreenCoordinates(gridSize);
             Vector2 lastNodeScreenPosition;
@@ -150,9 +145,8 @@ namespace GridHighlighter
             lastNodeScreenPosition = path.waypoints.list[lastNode].ConvertToScreenCoordinates(gridSize);
             distanceInPreviousFrame = Vector2.Distance(position, nextNodeScreenPosition);
             position += (nextNodeScreenPosition - lastNodeScreenPosition) / Vector2.Distance(lastNodeScreenPosition, nextNodeScreenPosition) * speed;
-            rectangle.X = (int)(position.X - rectangle.Width * 0.5);
-            rectangle.Y = (int)(position.Y - rectangle.Height * 0.5);
-            //batch.Draw(sprite, rectangle, color);
+            hitBox.X = (int)(position.X - hitBox.Width * 0.5);
+            hitBox.Y = (int)(position.Y - hitBox.Height * 0.5);
 
         }
 
@@ -184,7 +178,7 @@ namespace GridHighlighter
 
         public bool CheckProjectileCollision(Projectile shot)
         {
-            if (rectangle.Intersects(shot.GetRectangle()) || rectangle.Contains(shot.GetRectangle()))
+            if (hitBox.Intersects(shot.GetRectangle()) || hitBox.Contains(shot.GetRectangle()))
             {
                 TakeDamage(shot.GetDamage());
                 return true;

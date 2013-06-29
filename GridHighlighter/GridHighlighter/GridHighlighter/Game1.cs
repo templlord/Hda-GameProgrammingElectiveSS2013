@@ -122,7 +122,8 @@ namespace GridHighlighter
                         {
                             if (route.waypoints.HasValidLength())
                             {
-                                Enemies.Add(new Enemy(route.waypoints.list[route.waypoints.FindNearestStartingWaypointIndex(i,j)].ConvertToScreenCoordinates(GRID_SIZE), 20, 3, 1, 150, 1000, route, marioHandler));
+                                int startNodeIndex = route.waypoints.FindNearestStartingWaypointIndex(i, j);
+                                Enemies.Add(new Enemy(route.waypoints.list[startNodeIndex].ConvertToScreenCoordinates(GRID_SIZE), new Rectangle(0, 0, 20, 20), 3, 1, 150, 1000, route, startNodeIndex, marioHandler));
                             }
                         }
                     }
@@ -205,10 +206,10 @@ namespace GridHighlighter
                 //connection.Draw(spriteBatch, GRID_SIZE);
             }
 
-            //Animate enemies
+            //Animate and draw enemies
             foreach (Enemy opponent in Enemies)
             {
-                opponent.MoveAlongGraph(spriteBatch/*, route*/, GRID_SIZE);
+                opponent.MoveAlongGraph(GRID_SIZE);
                 spriteBatch.Draw(opponent.getAnimationInstance().getCurrentImage(marioHandler), new Rectangle((int)opponent.getPosition().X, (int)opponent.getPosition().Y, opponent.getAnimationInstance().getCurrentImage(marioHandler).Width, opponent.getAnimationInstance().getCurrentImage(marioHandler).Height), Color.White);
                 opponent.animationNextImage(gameTime, marioHandler);
             }
@@ -250,7 +251,7 @@ namespace GridHighlighter
             Enemies.RemoveAll(item => item == null);
         }
 
-        //Removes projectiles that collided with an enemy    !!! also remove if colliding with something else, leaving screen etc...
+        //Removes projectiles that collided with an enemy    !!! also remove if colliding with something else
         public void RemoveProjectiles()
         {
             for (int i = 0; i < Projectiles.Count; ++i)
