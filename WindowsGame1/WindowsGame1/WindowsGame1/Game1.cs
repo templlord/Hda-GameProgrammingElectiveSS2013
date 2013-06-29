@@ -18,6 +18,12 @@ namespace WindowsGame1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        
+string cameraResourceName = "CameraShutter";
+
+        KeyboardState theKeyboardState;
+        KeyboardState oldKeyboardState;
+        SoundEffect m_curEffect;
 
         List<Texture2D> m_marioList = new List<Texture2D>();
         int m_marioDrawIndex = 0;
@@ -66,6 +72,12 @@ namespace WindowsGame1
             m_marioList.Add(this.Content.Load<Texture2D>("Mario2"));
             m_marioList.Add(this.Content.Load<Texture2D>("Mario3"));
             m_marioList.Add(this.Content.Load<Texture2D>("Mario4"));
+
+            ContentManager contentManager = new ContentManager(this.Services, @"Content");
+            //contentManager.Load<SoundEffect>("CameraShutter.wav");
+            m_curEffect = contentManager.Load<SoundEffect>(cameraResourceName);
+
+
             // TODO: use this.Content to load your game content here
 
 
@@ -95,6 +107,26 @@ namespace WindowsGame1
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+           
+            theKeyboardState = Keyboard.GetState();
+
+            if (CheckKey(Keys.A))
+            {
+                m_curEffect.Play();
+            }
+
+
+
+            oldKeyboardState = theKeyboardState;
+        }
+
+        private bool CheckKey(Keys theKey)
+        {
+            if (theKeyboardState.IsKeyUp(theKey) && oldKeyboardState.IsKeyDown(theKey))
+
+                return true;
+            return false;
+
         }
 
         /// <summary>
@@ -122,8 +154,7 @@ namespace WindowsGame1
             }
                 
             Texture2D curTex = m_marioList[m_marioDrawIndex];
-            SoundEffectInstance soundInstance = null;
-
+            
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             spriteBatch.Begin();
